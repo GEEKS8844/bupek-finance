@@ -1,10 +1,25 @@
-export default function Page() {
+import { AboutHero } from '@/components/about/AboutHero';
+import { MissionVision } from '@/components/about/MissionVision';
+import { CoreValues } from '@/components/about/CoreValues';
+import { LeadershipTeam } from '@/components/about/LeadershipTeam';
+import { GrowthTimeline } from '@/components/about/GrowthTimeline';
+import { CorporateResponsibility } from '@/components/about/CorporateResponsibility';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About BUPEK Finance | Our Story, Mission & Values',
+  description: 'Learn about BUPEK Finance, our mission to empower businesses, core values, leadership team, and corporate responsibility initiatives across Tanzania.',
+};
+
+export default function About() {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold">About Us</h1>
-        <p className="text-slate-600 dark:text-slate-400 mt-4">Coming soon...</p>
-      </div>
-    </div>
+    <main className="w-full overflow-x-hidden">
+      <AboutHero />
+      <MissionVision />
+      <CoreValues />
+      <LeadershipTeam />
+      <GrowthTimeline />
+      <CorporateResponsibility />
+    </main>
   );
 }
